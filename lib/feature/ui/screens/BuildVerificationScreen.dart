@@ -65,7 +65,7 @@ class _BuildverificationscreenState extends State<Buildverificationscreen> {
                 Buildelevatedbutton(
                   onpress: () {
                     if (_formKey.currentState!.validate()) {
-                      context.read<Logincubit>().gotoVerificationScreen();
+                      context.read<Logincubit>().gotoHomeScreen();
                     }
                   },
                   title: "Login",
