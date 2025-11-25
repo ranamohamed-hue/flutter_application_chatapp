@@ -12,8 +12,12 @@ class Logincubit extends Cubit<Loginstate> {
   void setsignupActive() {
     emit(LoginTabChange(isLogin: false));
   }
-
+//للذهاب الي صفحة التحقق
   void gotoVerificationScreen() {
     emit(GoToVerificationScreen());
+  }
+//للذهاب الي الصفحة الرئيسية
+  void gotoHomeScreen() {
+    emit(GoToHomeScreen());
   }
 }

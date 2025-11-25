@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_chatapp/core/widgets/buildAppBar.dart';
 import 'package:flutter_application_chatapp/feature/logic/cubit/logincubit.dart';
 import 'package:flutter_application_chatapp/feature/logic/cubit/loginstate.dart';
+import 'package:flutter_application_chatapp/feature/ui/screens/home.dart';
 import 'package:flutter_application_chatapp/feature/ui/widgets/buildSignInScreen.dart';
 import 'package:flutter_application_chatapp/feature/ui/widgets/buildSignUpscreen.dart';
-
 import 'package:flutter_application_chatapp/feature/ui/widgets/buildTabs.dart';
 import 'package:flutter_application_chatapp/feature/ui/widgets/buildVerificationScreen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -20,6 +20,12 @@ class Login extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => Buildverificationscreen()),
+          );
+        }
+        if (state is GoToHomeScreen) {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Home()),
           );
         }
       },
