@@ -14,7 +14,7 @@ class Buildtextformfield extends StatelessWidget {
     required this.keyboardtype,
     required this.controller,
     required this.icon,
-    required this.validatorr
+    required this.validatorr,
   });
 
   @override
@@ -31,18 +31,24 @@ class Buildtextformfield extends StatelessWidget {
           fontWeight: FontWeight.w500,
           fontSize: 13,
         ),
-        prefixIcon: Icon(icon, color: Colors.purpleAccent),
+        prefixIcon: IconButton(
+          icon: Icon(icon, color: Colors.purpleAccent),
+          onPressed: () {},
+        ),
+
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
           borderSide: const BorderSide(color: Colors.grey, width: 1),
         ),
-      enabledBorder: OutlineInputBorder( borderRadius: BorderRadius.circular(10.0),
-        borderSide: const BorderSide(color: Colors.grey, width: 1),),
-         focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10.0),
-        borderSide: const BorderSide(color: Colors.purpleAccent, width: 2),
-      ),
-      contentPadding: EdgeInsets.symmetric(vertical:15,horizontal: 10 )
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10.0),
+          borderSide: const BorderSide(color: Colors.grey, width: 1),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10.0),
+          borderSide: const BorderSide(color: Colors.purpleAccent, width: 2),
+        ),
+        contentPadding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
       ),
     );
   }
