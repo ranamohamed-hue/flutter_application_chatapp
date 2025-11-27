@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_chatapp/core/widgets/buildTextFormField.dart';
+import 'package:flutter_application_chatapp/feature/ui/widgets/widgetsForHomeScreen/listViewBuilder.dart';
 
 class Chatscreen extends StatefulWidget {
   Chatscreen({super.key});
@@ -29,7 +30,7 @@ class _ChatscreenState extends State<Chatscreen> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             SizedBox(height: 10),
-      
+
             Buildtextformfield(
               title: "Search",
               hinttext: "AskHere",
@@ -44,65 +45,11 @@ class _ChatscreenState extends State<Chatscreen> {
             ),
             SizedBox(height: 20),
             Expanded(
-              child: ListView.builder(
-                itemCount: item,
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 8.0,
-                      horizontal: 12,
-                    ),
-                    child: Row(
-                      children: [
-                        Text(
-                          '12.12',
-                          style: TextStyle(fontSize: 14, color: Colors.grey),
-                        ),
-      
-                        SizedBox(width: 140),
-      
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Person1',
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              Text(
-                                'The last chat',
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.grey,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-      
-                        SizedBox(width: 10),
-      
-                        CircleAvatar(
-                          radius: 28,
-                          backgroundColor: const Color.fromARGB(
-                            255,
-                            197,
-                            141,
-                            207,
-                          ),
-                          child: Icon(
-                            Icons.person,
-                            size: 30,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
-                    ),
-                  );
-                },
+              child: Listviewbuilder(
+                itemcountt: 5,
+                title: "Person Name",
+                subtitel: "The Last Chat",
+                time: "12.12",
               ),
             ),
           ],
